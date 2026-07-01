@@ -41,6 +41,11 @@ public class DVDBounce : MonoBehaviour
 
     private Rigidbody2D rb;
 
+    void Awake(){
+        transform.position = new Vector3(Random.Range(-7,7),Random.Range(-7,7),0);
+    }
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();

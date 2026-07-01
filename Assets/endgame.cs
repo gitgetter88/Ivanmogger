@@ -19,4 +19,10 @@ public class endgame : MonoBehaviour
             Time.timeScale = 0f;
         }
     }
+     void OnTriggerEnter2D(Collider2D collider){
+        if (collider.gameObject.CompareTag("enemy")){
+            Debug.Log("contact enemy");
+            Time.timeScale = 0f;
+        }
+    }
 }

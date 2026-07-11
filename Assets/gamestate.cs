@@ -7,6 +7,12 @@ public class gamestate : MonoBehaviour
     public Button restart;
     public Button menu;
    
+   
+   
+    void Awake(){
+        endcanvas.SetActive(false);
+    }
+   
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

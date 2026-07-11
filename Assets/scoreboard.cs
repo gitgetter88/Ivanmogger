@@ -21,11 +21,17 @@ public class scoreboard : MonoBehaviour
         if (score >= 25){
             gj.SetActive(true);
         }
+        
     }
     void OnTriggerEnter2D(Collider2D coll){
         if (coll.gameObject.CompareTag("coin")){
            score = score +1;
             myText.text = "Score: " +score;
+
+            if (score % 10 == 0){
+            Time.timeScale = Time.timeScale + 0.05f;
+        }
         }
     }
+
 }
